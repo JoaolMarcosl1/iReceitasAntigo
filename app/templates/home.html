@@ -1,0 +1,14 @@
+<h1>Home page inicial</h1>
+{% if current_user.is_authenticated %} <!-- Verifica se o usuário esta logado -->
+    <div>
+        <h1>{{ current_user.name }}</h1> <!-- Exibe o nome do usuário que foi cadastrado -->
+        <p>Aparece para cadastrado e logado</p>
+        <a href="{{ url_for('logout') }}">Sair</a>
+    </div>
+
+{% else %} <!-- Se não estiver logado/cadastrado exibe o que está abaixo -->
+    <div>
+        <h1>Não cadastrado/logado</h1>
+        <p>Se você estiver lendo isso é pq você não esta cadastrado || logado</p>
+    </div>
+{% endif %}
