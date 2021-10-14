@@ -1,0 +1,8 @@
+flask
+dynaconf
+toml
+flaskstarter
+flask-sqlalchemy
+flask-migrate
+flask-bcrypt
+flask-login
