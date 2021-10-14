@@ -1,1 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
+.registro, 
+.login,
+.image {
+  min-height: 100vh;
+}
+
+.fundo {
+  background-image: url('https://cdn.pixabay.com/photo/2015/08/25/03/50/background-906135_960_720.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.login-heading {
+  font-weight: 900;
+  font-family: "Montserrat"
+}
+
+.registro-heading {
+    font-weight: 900;
+    font-family: "Montserrat"
+  }
+
+.container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+
+.botao {
+  background-color: #e6ac00;
+  padding: 5px 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 6px;
+  font-family: "Montserrat"
+}
 
