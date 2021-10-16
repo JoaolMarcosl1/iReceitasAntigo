@@ -1,5 +1,5 @@
 {% if current_user.is_authenticated %}
-<h1>{{ current_user.name }}, você ja está logado em sua conta! Em uma contagem de 5 segundos você sera redirecionado para a home page :_)</h1>
+<h1>Olá {{ current_user.name }}, nosso sistema verificou que você ja está logado! Em 5 segundos você será redirecionado para a tela inicial.</h1>
 <meta http-equiv="refresh" content="5; URL='https://joaomarcos123.pythonanywhere.com/'"/>
 
 {% else %}
