@@ -5,3 +5,6 @@ flaskstarter
 flask-sqlalchemy
 flask-migrate
 mysqlclient
+flask-bcrypt
+flask-login
+
