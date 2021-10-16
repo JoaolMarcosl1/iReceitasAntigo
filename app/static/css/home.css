@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  height: 100px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+a:link, a:visited{
+  text-decoration: none;
+  color: white;
+}
+header{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+  height: 125px;
+}
+
+.logo{
+  cursor: pointer;
+  max-width:237px;
+  max-height:400px;
+
+}
+.itens{
+  list-style: none;
+}
+
+.itens li{
+  font-family: "Montserrat";
+  font-size: 22px;
+  display: inline-block;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+
+.itens li a{
+  transition: .3s;
+  color: #d57700;
+  font-family: "Montserrat";
+  font-weight: bolder;
+}
+
+.itens li a:hover{
+  color: #d57700;
+  text-decoration: none;
+
+}
+
+.registrar{
+  font-family: "Montserrat";
+  font-weight: bolder;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background: #d57700;
+  position: center;
+  list-style: none;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  right: 10px;
+  color: white;
+}
+
+.entrar{
+  font-family: "Montserrat";
+  font-weight: bolder;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background: #d57700;
+  position: center;
+  list-style: none;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+.caixa-search {
+    background-color: #333;
+    border-radius: 40px;
+
+}
+.caixa-search:hover > .caixa-texto {
+    width: 240px;
+    padding: 0 5px;
+
+}
+
+.botao-search {
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    transition: 0.4s;
+    color: orange;
+
+      }
+
+.caixa-texto {
+    border: none;
+    background-color: #333;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+.rounded{
+  height:700px;
+  width:1700px;
+}
+
+.texto{
+  color:white;
+  font-family: "Montserrat";
+  letter-spacing:1.6px;
+  text-decoration: none;
+}
+
+
+#linha-horizontal {
+    width: 3000px;
+    border: 1px solid #f2f2f2;
+
+}
