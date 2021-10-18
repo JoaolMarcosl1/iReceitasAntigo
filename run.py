@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, flash
 from flask_login import login_user, logout_user
 from app import app, db
 from app.models import User
@@ -10,6 +10,7 @@ from app.models import User
 #from  flask.ext.bcrypt  import  Bcrypt
 #app  =  Flask ( __name__ )
 #bcrypt  =  Bcrypt ( app )
+
 @app.route('/home')
 @app.route('/')
 def home():
@@ -17,6 +18,7 @@ def home():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
+    error = None
     if request.method == 'POST':
         name = request.form['name']
         email = request.form['email']
@@ -32,8 +34,11 @@ def register():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    error = None
     if request.method == 'POST':
         email = request.form['email']
+        error = 'Email inválido!'
+        print('Email inválido')
         pwd = request.form['password']
 
         user = User.query.filter_by(email=email).first()
@@ -42,6 +47,7 @@ def login():
             return redirect(url_for('login'))
 
         login_user(user)
+        flash('You were successfully logged in')
         return redirect(url_for('home'))
 
     return render_template('login.html')
@@ -64,6 +70,12 @@ def usu_email(email):
   #  logout_user()
    # return redirect(somewhere)
 
+
+
+@app.errorhandler(404)#Caso usuário acesse uma pagina que não existe
+def not_found(e):
+  return render_template("404.html")
+
 @app.route('/topicos')
 def topicos():
     return render_template("topicos.html")
@@ -80,6 +92,7 @@ def perfil():
 @app.route('/logout')
 def logout():
     logout_user()
+    flash('You were logged out')
     return redirect(url_for('home'))
 
 
