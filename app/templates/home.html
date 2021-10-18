@@ -62,21 +62,27 @@ placeholder="Pesquisar">
             </ul>
         </nav>
 
-        <nav>
-            {% if current_user.is_authenticated %}
 
-            {% else %}
+
+
+{#{% extends "nav_login_registro.html" %}#}
+
+        <nav>
+            {% if not current_user.is_authenticated %}
             <ul class="registrar">
                  <li> <a href="register">registrar</a> </li>
                </ul>
                {% endif %}
-               {% if current_user.is_authenticated %}
 
-           {% else %}
-          <ul class="entrar">
-          <li> <a href="login">entrar</a> </li>
-          {% endif %}
-             </ul>
+
+            {% if not current_user.is_authenticated %}
+
+                <ul class="entrar">
+                <li> <a href="login">entrar</a> </li>
+
+            {% endif %}
+
+          </ul>
         </nav>
 
 
