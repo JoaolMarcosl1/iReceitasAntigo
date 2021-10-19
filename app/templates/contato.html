@@ -8,14 +8,12 @@
   <script src="/static/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-
 </head>
 
 <body>
   <header>
 
     <a href="{{url_for('home')}}"><img src="https://media.discordapp.net/attachments/719989066808164492/895300449488494622/unknown__1_-removebg-preview_1.png" alt="" class="logo"></a>
-
 
     <section class="caixa-search">
       <input class="caixa-texto" type="text" name="" placeholder="">
@@ -32,17 +30,14 @@
         <li><a href="{{url_for('perfil')}} ">Perfil</a></li>
         {% endif %}
 
-        {% if current_user.is_authenticated %}
-        <class="sair">
-          <li><a href=" {{url_for('logout')}} " class="btn-area sair">Logout</a></li>
-          {% endif %}
-
       </ul>
     </nav>
 
     <nav>
       {% if current_user.is_authenticated %}
-
+      <ul class="sair">
+        <li><a href=" {{url_for('logout')}}">Logout</a></li>
+      </ul>
       {% else %}
       <ul class="registrar">
         <li> <a href="register">registrar</a> </li>
@@ -59,25 +54,15 @@
 
   </header>
 
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=Ddevice-width, initial-scale=1.0">
-<title>Contato</title>
-</head>
-<body>
-
-    <h1>Olá {{ current_user.name }}, envie uma mensagem para nossa equipe :)</h1>
-    <br>
-    <form action="" method="POST">
+  <h1>Olá {{ current_user.name }}, envie uma mensagem para nossa equipe :)</h1>
+  <br>
+  <form action="" method="POST">
     <input type="email" name="email" placeholder="Email" required id="">
     <input type="text" name="subject" placeholder="Subject" required id="">
     <textarea name="message" id="" cols="20" placeholder="Message Body" required rows='10'></textarea>
     <input type="submit" value="Enviar mensagem">
-
-</form>
-</body>
-</html>
+  </form>
 
 </body>
+
 </html>
