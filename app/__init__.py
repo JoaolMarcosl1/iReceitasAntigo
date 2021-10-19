@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
-from flask_mail import Mail, Message
+
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -16,4 +16,3 @@ app.config['MAIL_USERNAME '] = "joaobastos716@gmail.com"
 app.config['MAIL_PASSWORD'] = "123"
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
-mail  =  Mail ( app )
