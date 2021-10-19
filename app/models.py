@@ -24,17 +24,24 @@ class User(db.Model, UserMixin): #usuarios
     password = db.Column(db.String(2048), nullable=False)
 
 
+
+#class receitapost(db.Model):
+ #   id = db.Column(db.Integer, primary_key=True)
+ #   title = db.Column(db.String(200))
+ #   content = db.Column(db.Text)
+  #  passo = db.Column(db.Text)
+   # ingredientes = db.Column(db.Text)
+   # date_posted = db.Column(db.DateTime)
+    #userid = db.Column(db.Integer, ForeignKey('User.id'))
+   # user = db.relationship('User', foreign_keys=userid)
+   # imagem = db.Column(db.LargeBinary, nullable =False)
+
 #class perfil(db.Model, UserMixin):
    # user_id = Column(db.Integer, ForeignKey('User.id'), nullable=False)
     #name = Column(db.String, ForeignKey('User.name'), nullable=False)
    # email = Column(db.String, ForeignKey('User.email'), nullable=False)
+   # imagem = db.Column(db.LargeBinary, nullable =False)
     #Caso o usuário queira redefinir a senha, redirecione para a tela de login e clique em "Esqueci minha senha"
-
-
-
-
-
-
 
 #class Receitas(db.Model):
  #   id = db.Column(db.Integer, autoincrement=True, primary_key=True)
@@ -43,18 +50,6 @@ class User(db.Model, UserMixin): #usuarios
     #tempo_preparo = db.Column(db.DateTime(), nullable=False)
     #rendimento = db.Column(db.String(50), nullable=False)
     #imagem = db.Column(db.LargeBinary, nullable =False)
-    #userid = db.Column('user_id', Integer, ForeignKey("User.user_id"), nullable=False)
-
-
-
-
-
-
-
-#class passo(db.Model):
-  #  id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-
-
 
     def __init__(self, name, email, password):
         self.name = name
@@ -67,13 +62,7 @@ class User(db.Model, UserMixin): #usuarios
     def __str__(self):
         return f'Usuário {self.name} tem o e-mail {self.email}'
 
-    # def __init__(self, titulo, desc, tempo_preparo, rendimento, imagem, userid):
-       #  self.titulo = titulo
-        # self.desc = desc
-       #  self.tempo_preparo = tempo_preparo
-       #  self.rendimento = rendimento
-       #  self.imagem = imagem
-        # self.userid = userid
+
 
 
 

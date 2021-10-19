@@ -1,0 +1,23 @@
+<head>
+    <body>
+        <h1>Edição de dados</h1>
+        <form action="/edit/{{user.id}}" method="post">
+
+            <div class="row justify-content-center">
+                <div class="row">
+                    <input type="text" class="form-control" name="name" value = "{{ current_user.name }}" placeholder="nome" required>
+            </div>
+                <div class="row">
+                    <input type="text" class="form-control" name="email" value = "{{ current_user.email }}" placeholder="email" required>
+                </div>
+          <div class="row col-xs-12">
+              <button type="submit" class="btn btn-block btn-success">Enviar</button>
+          </div>
+
+
+        </form>
+    </body>
+
+
+
+</head>

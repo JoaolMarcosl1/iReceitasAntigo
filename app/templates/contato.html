@@ -59,9 +59,25 @@
 
   </header>
 
-  <center>
-    <img src="https://cdn.discordapp.com/attachments/731144036416749570/898605010911367168/image.png">
-  </center>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=Ddevice-width, initial-scale=1.0">
+<title>Contato</title>
+</head>
+<body>
+
+    <h1>Olá {{ current_user.name }}, envie uma mensagem para nossa equipe :)</h1>
+    <br>
+    <form action="" method="POST">
+    <input type="email" name="email" placeholder="Email" required id="">
+    <input type="text" name="subject" placeholder="Subject" required id="">
+    <textarea name="message" id="" cols="20" placeholder="Message Body" required rows='10'></textarea>
+    <input type="submit" value="Enviar mensagem">
+
+</form>
+</body>
+</html>
 
 </body>
 </html>
