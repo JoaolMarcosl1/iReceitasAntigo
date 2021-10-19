@@ -52,17 +52,22 @@
 
 
     </header>
+{% if current_user.is_authenticated %}
+<h1>Dados do usuário</h1>
+<br>
+<br>
+<br>
+<h3>Nome: {{ current_user.name }}</h3>
+<h3>Email: {{ current_user.email }}</h3>
 
-<h1>Dados User</h1>
 
-    {% for user in users %}
-        <tr>
-            <td>{{ User.id }}</td>
-            <td>{{ User.name }}</td>
-            <td>{{ User.email }}</td>
-            <td><a href="/atualizar/{{ User.id }}">Atualizar</a></td>
-        </tr>
-    {% endfor %}
+<a style="color:black;" href="/edit/{{current_user.id}}">Alterar dados</a> <br>
+<a style="color:black;" href="/delete/{{current_user.id}}">(Deletar conta)</a>
+
+
+
+
+{% endif %}
 
 
 
