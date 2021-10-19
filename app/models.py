@@ -24,6 +24,7 @@ class User(db.Model, UserMixin): #usuarios
     password = db.Column(db.String(2048), nullable=False)
 
 
+
 #class receitapost(db.Model):
  #   id = db.Column(db.Integer, primary_key=True)
  #   title = db.Column(db.String(200))
