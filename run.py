@@ -23,11 +23,17 @@ def register():
         email = request.form['email']
         pwd = request.form['password']
 
-        user = User(name, email, pwd)
-        db.session.add(user) #inserir
-        db.session.commit()  #atualiza
+        jatem = User.query.filter_by(email=email).first()
 
-        return redirect(url_for('login'))
+        if jatem is not None:
+            flash('Já existe uma conta com esse e-mail :)')
+            return redirect(url_for('register'))
+
+        else:
+            user = User(name, email, pwd)
+            db.session.add(user) #inserir
+            db.session.commit()  #atualiza
+            return redirect(url_for('login'))
 
     return render_template('register.html')
 
@@ -65,25 +71,38 @@ def login():
 
 #####
 
+@app.route('/contato')
+def contato():
+    return render_template("contato.html")
+
 #Alteração de dados
 @app.route("/edit/<int:id>", methods=['GET', 'POST'])
 def edit(id):
     user = User.query.get(id)
     if request.method == 'POST':
+
         user.name = request.form['name']
         user.email = request.form['email']
-        db.session.commit()
 
+
+        db.session.commit()
         return redirect(url_for('home'))
+
     return render_template("edit.html", user=user)
+
+
 #Deletar conta
 @app.route("/delete/<int:id>", methods=['GET', 'POST'])
 def delete(id):
     user = User.query.get(id)
+
     db.session.delete(user)
     db.session.commit()
 
     return redirect(url_for("home"))
+
+
+#Registro email verificar, alterar dadoas verificar email, inseir foto e finish.
 
 #@app.route("/alterar_senha/<int:id>", methods=['GET', 'POST'])
 #def alterar_senha(id):
@@ -114,10 +133,6 @@ def not_found(e):
 @app.route('/topicos')
 def topicos():
     return render_template("topicos.html")
-
-@app.route('/contato')
-def contato():
-    return render_template("contato.html")
 
 @app.route('/perfil')
 def perfil():

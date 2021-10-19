@@ -5,4 +5,4 @@ flaskstarter
 flask-sqlalchemy
 flask-migrate
 mysqlclient
-
+flask_mail
