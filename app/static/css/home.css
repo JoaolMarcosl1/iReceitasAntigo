@@ -141,9 +141,16 @@ header{
     text-decoration: none;
     align-items: center;
     transition: 0.4s;
-    color: orange;
+    color: white;
 
       }
+
+
+.fas {
+    color:#FF7F00;
+}
+
+
 
 .caixa-texto {
     border: none;
