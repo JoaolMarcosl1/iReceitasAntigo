@@ -5,7 +5,7 @@ Imagem do Login: https://cdn.pixabay.com/photo/2015/08/25/03/50/background-90613
 
 Imagens do utilizadas no carrossel da página inicial:
 
-https://www.pexels.com/pt-br/foto/manjericao-pao-queijo-cozinhando-5949902/
+https://www.pexels.com/pt-br/foto/assado-prato-louca-flatlay-5949885/
 
 https://www.pexels.com/pt-br/foto/pessoa-segurando-uma-colher-e-uma-tigela-redonda-de-ceramica-vermelha-com-bolos-1065030/
 
