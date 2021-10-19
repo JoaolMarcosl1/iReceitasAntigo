@@ -32,17 +32,15 @@
         <li><a href="{{url_for('perfil')}} ">Perfil</a></li>
         {% endif %}
 
-        {% if current_user.is_authenticated %}
-        <class="sair">
-          <li><a href=" {{url_for('logout')}} " class="btn-area sair">Logout</a></li>
-          {% endif %}
 
       </ul>
     </nav>
 
     <nav>
       {% if current_user.is_authenticated %}
-
+        <ul class="sair">
+        <li><a href=" {{url_for('logout')}}">Logout</a></li>
+      </ul>
       {% else %}
       <ul class="registrar">
         <li> <a href="register">registrar</a> </li>

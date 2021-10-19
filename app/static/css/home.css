@@ -102,6 +102,23 @@ header{
   color: white;
 }
 
+.sair{
+  font-family: "Montserrat";
+  font-weight: bolder;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background: #d57700;
+  position: center;
+  list-style: none;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
 .caixa-search {
     background-color: #333;
     border-radius: 40px;
@@ -124,9 +141,16 @@ header{
     text-decoration: none;
     align-items: center;
     transition: 0.4s;
-    color: orange;
+    color: white;
 
       }
+
+
+.fas {
+    color:#FF7F00;
+}
+
+
 
 .caixa-texto {
     border: none;
@@ -161,4 +185,52 @@ header{
     width: 3000px;
     border: 1px solid #f2f2f2;
 
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    background: #00a8ff;
+}
+.search-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #353b48;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+.search-btn{
+    color: #00a8ff;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #353b48;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width:0px;
+}
+.search-box:hover > .search-txt{
+    width: 240px;
+    padding: 0 6px;
+}
+.search-box:hover > .search-btn{
+    background: orange;
 }
