@@ -2,6 +2,16 @@ from flask import render_template, request, redirect, url_for, flash, session
 from flask_login import login_user, logout_user
 from app import app, db
 from app.models import User
+from flask_mail import Mail, Message
+######################################
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_SSL']= True
+app.config['MAIL_USE_TLS']= False
+app.config['MAIL_USERNAME'] = 'receitasprojetoint@gmail.com'
+app.config['MAIL_PASSWORD'] = 'receitas2021proj'
+######################################
+mail = Mail(app)
 
 
 #from  flask.ext.bcrypt  import  generate_password_hash
@@ -10,6 +20,24 @@ from app.models import User
 #from  flask.ext.bcrypt  import  Bcrypt
 #app  =  Flask ( __name__ )
 #bcrypt  =  Bcrypt ( app )
+
+@app.route('/contato', methods=['GET', 'POST'])
+def contato():
+    if request.method == 'POST':
+        tittle = request.form.get('tittle')
+        message = request.form.get('message')
+
+        msg = Message(subject=f"Tittle: {tittle}", body=f"\nConteudo: {message}", sender="joaobastos716@gmail.com", recipients=["receitasprojetoint@gmail.com"])
+        mail.send(msg)
+        #msg = Message("Olá, Estou precisando da ajuda de vocês.", sender="joaobastos716@gmail.com", recipients=["receitasprojetoint@gmail.com"])
+        #msg.body = "Enviando uma duvida, testando"
+        #mail.send(msg)
+        return "Email enviado com sucesso"
+
+
+    return render_template("contato.html")
+
+
 
 @app.route('/home')
 @app.route('/')
@@ -55,26 +83,6 @@ def login():
 
     return render_template('login.html')
 
-#####
-#@app.route("/lista")
-#@login_manager.user_loader
-#def load_user(id):
-
-
- #   return render_template("lista.html")
-#@login_manager.user_loader
-#def load_user(user_id):
-  #  try:
- #       return User.query.get(user_id)
-  #  except:
-   #     return None
-
-#####
-
-@app.route('/contato')
-def contato():
-    return render_template("contato.html")
-
 #Alteração de dados
 @app.route("/edit/<int:id>", methods=['GET', 'POST'])
 def edit(id):
@@ -84,9 +92,14 @@ def edit(id):
         user.name = request.form['name']
         user.email = request.form['email']
 
+        jatem = User.query.filter_by(email=user.email).first()
 
-        db.session.commit()
-        return redirect(url_for('home'))
+        if jatem is not None:
+            return "E-mail existe"
+
+        else:
+            db.session.commit()
+            return redirect(url_for('home'))
 
     return render_template("edit.html", user=user)
 
@@ -100,22 +113,6 @@ def delete(id):
     db.session.commit()
 
     return redirect(url_for("home"))
-
-
-#Registro email verificar, alterar dadoas verificar email, inseir foto e finish.
-
-#@app.route("/alterar_senha/<int:id>", methods=['GET', 'POST'])
-#def alterar_senha(id):
-  #  user = User.query.get(id)
-  #  if request.method == 'POST':
-        #if not user or not user.verify_password(pwd):
-         #   flash("Email ou senha inválidos!")
-         #   return redirect(url_for('login'))
-
-
-       # return redirect(url_for('login'))
-
-
 
 
 @app.get('/usuario/<email>')
