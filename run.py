@@ -107,6 +107,7 @@ def edit(id):
 
         user.name = request.form['name']
         user.email = request.form['email']
+        user.sobre = request.form['sobre']
 
         try:
             db.session.commit()
