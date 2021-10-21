@@ -15,6 +15,18 @@ from app.models import User
 def home():
     return render_template("home.html")
 
+@app.route('/massas')
+def massas():
+    return render_template("MassasCarrossel.html")
+
+@app.route('/comidasfit')
+def comidasfit():
+    return render_template("ComidasFitnessCarrossel.html")
+
+@app.route('/sobremesas')
+def sobremesas():
+    return render_template("SobremesasCarrossel.html")
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':

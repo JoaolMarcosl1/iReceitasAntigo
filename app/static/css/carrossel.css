@@ -12,26 +12,26 @@ body{
   margin-left:-25px;
   border-radius: 10px;
   margin-bottom: 80px;
-  margin-top: 65px;  
+  margin-top: 65px;
 }
 
 .massa{
   margin-left:1048px;
-  font-family:IBM Plex Serif; 
+  font-family:IBM Plex Serif;
   margin-top: -485px;
 }
 
 .descricaomassa{
   margin-left:1048px;
   width:600px;
-  font-family:Nanum Myeongjo; 
+  font-family:Nanum Myeongjo;
   margin-top: -400px;
  }
 
 .especificacoes{
   font-family:Nanum Myeongjo;
   margin-left:150px;
-  font-size:25px;  
+  font-size:25px;
 }
 
 #linha-horizontal {
@@ -44,7 +44,7 @@ body{
 #molho{
    margin-top: -15px;
    margin-left:412px;
-   font-family:IBM Plex Serif;  
+   font-family:IBM Plex Serif;
 }
 
 #linha-horizontal2 {
@@ -66,23 +66,23 @@ body{
 #modospreparomassas{
   margin-left:150px;
   font-family:Times New Roman;
-  letter-spacing:1.2px;  
+  letter-spacing:1.2px;
   margin-bottom: 65px;
 }
 
 #ingredientesmassa{
    margin-left:150px;
-  letter-spacing:1.5px;  
+  letter-spacing:1.5px;
    font-family:Nanum Myeongjo;
    margin-top: -22px;
-   margin-bottom: 55px;   
+   margin-bottom: 55px;
 }
 
 .text-break{
   margin-right:815px;
   margin-left:150px;
   letter-spacing:1.5px;
-  font-family:Nanum Myeongjo; 
+  font-family:Nanum Myeongjo;
   font-size:25px;
 }
 
@@ -105,14 +105,14 @@ body{
 
 .receita{
   margin-left:1048px;
-  font-family:IBM Plex Serif; 
+  font-family:IBM Plex Serif;
   margin-top: -485px;
 }
 
 .descricaofit{
   margin-left:1048px;
   width:600px;
-  font-family:Nanum Myeongjo; 
+  font-family:Nanum Myeongjo;
   margin-top: -390px;
  }
 
@@ -120,13 +120,13 @@ body{
     width: 250px;
     border: 1px solid #ff6600;
     margin-left:150px;
-    margin-top:75px;       
+    margin-top:75px;
 }
 
 #massa{
    margin-top: -15px;
    margin-left:412px;
-   font-family:IBM Plex Serif;  
+   font-family:IBM Plex Serif;
 }
 
 #linha-horizontal6{
@@ -140,23 +140,23 @@ body{
 #modospreparofit{
   margin-left:150px;
   font-family:Times New Roman;
-  letter-spacing:1.2px;  
+  letter-spacing:1.2px;
   margin-bottom: 35px;
 }
 
 #ingredientesfit{
    margin-left:150px;
-  letter-spacing:1.5px;  
+  letter-spacing:1.5px;
    font-family:Nanum Myeongjo;
    margin-top: -22px;
-   margin-bottom: 45px;    
+   margin-bottom: 45px;
 }
 
 .text-break{
   margin-right:815px;
   margin-left:150px;
   letter-spacing:1.5px;
-  font-family:Nanum Myeongjo; 
+  font-family:Nanum Myeongjo;
   font-size:25px;
 }
 
@@ -171,20 +171,20 @@ body{
 
 .bolo{
   margin-left:1048px;
-  font-family:IBM Plex Serif; 
+  font-family:IBM Plex Serif;
   margin-top: -485px;
 }
 
 .recheio{
   margin-left:1048px;
-  font-family:IBM Plex Serif; 
+  font-family:IBM Plex Serif;
   margin-top: -435px;
 }
 
 .descricaosobre{
   margin-left:1080px;
   width:600px;
-  font-family:Nanum Myeongjo; 
+  font-family:Nanum Myeongjo;
   margin-top: -350px;
 }
 
@@ -193,14 +193,14 @@ body{
     border: 1px solid #ff6600;
     margin-left:150px;
     margin-top: 95px;
-    
+
 }
 
 #massabolo{
    margin-top: -15px;
    margin-left:412px;
-   font-family:IBM Plex Serif; 
-   
+   font-family:IBM Plex Serif;
+
 }
 
 #linha-horizontal8 {
@@ -214,23 +214,23 @@ body{
 #modopreparosobre{
   margin-left:150px;
   font-family:Times New Roman;
-  letter-spacing:1.2px; 
+  letter-spacing:1.2px;
   margin-bottom: 45px;
 }
 
 #igredientesbolo{
   margin-left:150px;
-  letter-spacing:1.5px;  
+  letter-spacing:1.5px;
   font-family:Nanum Myeongjo;
   margin-top: -22px;
-  margin-bottom: 45px;   
+  margin-bottom: 45px;
 }
 
 .text-break{
   margin-right:815px;
   margin-left:150px;
   letter-spacing:1.2px;
-  font-family:Nanum Myeongjo; 
+  font-family:Nanum Myeongjo;
   font-size:25px;
 }
 
