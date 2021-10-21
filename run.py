@@ -1,8 +1,12 @@
+import os
 from flask import render_template, request, redirect, url_for, flash, session
 from flask_login import login_user, logout_user, current_user, login_manager
 from app import app, db
-from app.models import User
+from app.models import User, receitapost
 from flask_mail import Mail, Message
+from sqlalchemy.exc import IntegrityError
+from werkzeug.utils import secure_filename
+
 
 
 
@@ -25,6 +29,7 @@ mail = Mail(app)
 @app.route('/home')
 @app.route('/')
 #@login_manager
+
 def home():
     if not current_user.is_authenticated:
         flash("\nVocê não esta logado.")
@@ -64,8 +69,12 @@ def contato():
 
         #message = message+f"\nReperquilson se garante mais que o {current_user.name}"
 
-        msg = Message(subject=f"Help {current_user.name}: {tittle}", body=f"\n{current_user.name}:{message}", sender="joaobastos716@gmail.com", recipients=["receitasprojetoint@gmail.com"])
+        msg = Message(subject=f"Help {current_user.name}: {tittle}", body=f"\n{current_user.name}: {message}",
+                      sender="joaobastos716@gmail.com", recipients=["receitasprojetoint@gmail.com"])
+
         mail.send(msg)
+        flash("Sua mensagem foi enviada com sucesso!")
+
         #msg = Message("Olá, Estou precisando da ajuda de vocês.", sender="joaobastos716@gmail.com", recipients=["receitasprojetoint@gmail.com"])
         #msg.body = "Enviando uma duvida, testando"
         #mail.send(msg)
@@ -93,6 +102,7 @@ def login():
     return render_template('login.html')
 
 #Alteração de dados
+
 @app.route("/edit/<int:id>", methods=['GET', 'POST'])
 def edit(id):
     user = User.query.get(id)
@@ -101,28 +111,24 @@ def edit(id):
         user.name = request.form['name']
         user.email = request.form['email']
 
-        jatem = User.query.filter_by(email=user.email).first()
-
-        if jatem.email==user.email:
-            return "E-mail existe"
-
-        else:
+        try:
             db.session.commit()
-            return "Deu certo, você mudou o e-mail"
+            flash("Alteração feita com sucesso!")
+            return redirect(url_for('home'))
 
+        except IntegrityError:
+            flash("Opa! Esse e-mail ja esta sendo utilizado.")
+            return redirect(url_for('perfil'))
 
-
+            #return "E-mail existe"
+            #db.session.commit()
+           # return "Deu certo, você mudou o e-mail"
        # db.session.commit()
        # return redirect(url_for('home'))
-
         #jatem = User.query.filter_by(email=user.email).first()
-
        # if jatem is not None:
            # return "E-mail existe"
-
       #  else:
-
-
     return render_template("edit.html", user=user)
 
 
@@ -161,7 +167,6 @@ def perfil():
 @app.route('/logout')
 def logout():
     logout_user()
-    flash('\nVocê foi desconectado.\n')
     return redirect(url_for('home'))
 
 

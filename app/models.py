@@ -22,39 +22,44 @@ class User(db.Model, UserMixin): #usuarios
     name = db.Column(db.String(70), nullable=False)
     email = db.Column(db.String(70), nullable=False, unique=True)
     password = db.Column(db.String(2048), nullable=False)
+    sobre = db.Column(db.String(100), nullable=False)
+    img = db.Column(db.Text, nullable=False, default="")#Codigo numerico
+
+    receitapostagens = db.relationship('receitapost',backref='user' ,lazy=True)
 
 
+class receitapost(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(200))
+    content = db.Column(db.Text)
+    passo = db.Column(db.Text)
+    ingredientes = db.Column(db.Text)
+    date_posted = db.Column(db.DateTime)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    imagem = db.Column(db.LargeBinary, nullable =False)
 
-#class receitapost(db.Model):
- #   id = db.Column(db.Integer, primary_key=True)
- #   title = db.Column(db.String(200))
- #   content = db.Column(db.Text)
-  #  passo = db.Column(db.Text)
-   # ingredientes = db.Column(db.Text)
-   # date_posted = db.Column(db.DateTime)
-    #userid = db.Column(db.Integer, ForeignKey('User.id'))
-   # user = db.relationship('User', foreign_keys=userid)
-   # imagem = db.Column(db.LargeBinary, nullable =False)
-
-#class perfil(db.Model, UserMixin):
-   # user_id = Column(db.Integer, ForeignKey('User.id'), nullable=False)
-    #name = Column(db.String, ForeignKey('User.name'), nullable=False)
-   # email = Column(db.String, ForeignKey('User.email'), nullable=False)
-   # imagem = db.Column(db.LargeBinary, nullable =False)
-    #Caso o usuário queira redefinir a senha, redirecione para a tela de login e clique em "Esqueci minha senha"
 
 #class Receitas(db.Model):
- #   id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-  #  titulo = db.Column(db.String(50), nullable=False)
-   # desc = db.Column(db.String(100), nullable=False)
+   # id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+   # titulo = db.Column(db.String(50), nullable=False)
+    #desc = db.Column(db.String(100), nullable=False)
     #tempo_preparo = db.Column(db.DateTime(), nullable=False)
     #rendimento = db.Column(db.String(50), nullable=False)
-    #imagem = db.Column(db.LargeBinary, nullable =False)
 
-    def __init__(self, name, email, password):
+    def __init__(self, name, email, password, img):
         self.name = name
         self.email = email
+        self.img = img
         self.password = generate_password_hash(password)
+
+
+    #def __init__(self, name, email, password):
+
+
+
+
+
+
 
     def verify_password(self, pwd):
         return check_password_hash(self.password, pwd)

@@ -52,9 +52,19 @@
     </nav>
 
   </header>
-  
-  
+
+
   {% if current_user.is_authenticated %}
+
+    {% for mess in get_flashed_messages() %}
+
+  <center>
+
+  {{mess}}
+</center>
+
+  {%endfor%}
+
   <h1>Dados do usuário</h1>
   <br>
   <br>

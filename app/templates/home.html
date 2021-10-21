@@ -26,8 +26,8 @@
     <nav>
       <ul class="itens">
         <li><a href="{{url_for('topicos')}}">Tópicos</a></li>
-        <li><a href="{{url_for('contato')}}">Contato</a></li>
         {% if current_user.is_authenticated %}
+        <li><a href="{{url_for('contato')}}">Contato</a></li>
         <li><a href="{{url_for('perfil')}} ">Perfil</a></li>
         {% endif %}
 
@@ -54,6 +54,12 @@
     </nav>
 
   </header>
+
+
+
+
+
+
 
   <center>
     <div id="linha-horizontal"></div>
