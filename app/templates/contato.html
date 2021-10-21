@@ -53,6 +53,7 @@
     </nav>
 
   </header>
+  {% if current_user.is_authenticated %}
 
   <h1>Olá {{ current_user.name }}, envie uma mensagem para nossa equipe :)</h1>
   <br>
@@ -63,6 +64,11 @@
     <input type="submit" value="Enviar mensagem">
   </form>
 
+  {% else %}
+
+  <h1>Somente quem esta logado pode enviar um e-mail para a nossa central</h1>
+
+  {% endif %}
 </body>
 
 </html>

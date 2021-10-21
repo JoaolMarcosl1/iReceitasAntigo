@@ -25,7 +25,10 @@
                   <h1 class="registro-heading mb-4"> Registre-se! </h1>
                 </center>
                 <form action="" class="container" method="post">
+                    {% for mess in get_flashed_messages() %}
                   <div class="row justify-content-center">
+                      {{mess}}
+                        {%endfor%}
                     <div class="row">
                       <input type="text" class="form-control" name="name" placeholder="Nome" required>
                     </div>
@@ -33,19 +36,23 @@
                       <input type="email" class="form-control" name="email" placeholder="E-mail" required>
                     </div>
 
+
                     <div class="row">
                       <input type="password" class="form-control" name="password" placeholder="Senha" required>
                     </div>
                   </div>
+
 
                   <br></br>
                   <div class="row-col-xs-12">
                     <center>
                       <div class="botao">
                         <input type="submit" class="btn btn-block btn-sucess" value="Cadastrar">
+
                     </center>
                   </div>
                 </form>
+
 
               </div>
             </div>

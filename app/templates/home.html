@@ -59,10 +59,16 @@
     <div id="linha-horizontal"></div>
   </center>
 
-  {% if current_user.is_authenticated %}
+  {% for mess in get_flashed_messages() %}
 
-  <h5>Seja bem vindo(a) {{ current_user.name }}</h5>
-  {% endif %}
+  <center>
+
+  {{mess}}
+</center>
+
+  {%endfor%}
+
+  <!--<h5>Seja bem vindo(a) {{ current_user.name }}</h5> !-->
   <br><br>
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
