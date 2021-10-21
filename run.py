@@ -103,7 +103,7 @@ def edit(id):
 
         jatem = User.query.filter_by(email=user.email).first()
 
-        if not jatem or not jatem.email == user.email:
+        if jatem.email==user.email:
             return "E-mail existe"
 
         else:
