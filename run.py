@@ -1,14 +1,9 @@
-import os
-from flask import render_template, request, redirect, url_for, flash, session
-from flask_login import login_user, logout_user, current_user, login_manager
+from flask import render_template, request, redirect, url_for, flash
+from flask_login import login_user, logout_user, current_user
 from app import app, db
-from app.models import User, receitapost
+from app.models import User
 from flask_mail import Mail, Message
 from sqlalchemy.exc import IntegrityError
-from werkzeug.utils import secure_filename
-
-
-
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
@@ -44,6 +39,8 @@ def register():
         name = request.form['name']
         email = request.form['email']
         pwd = request.form['password']
+        sobre = ""
+
 
         jatem = User.query.filter_by(email=email).first()
 
@@ -52,7 +49,7 @@ def register():
             return redirect(url_for('register'))
 
         else:
-            user = User(name, email, pwd)
+            user = User(name, email, pwd, sobre)
             db.session.add(user) #inserir
             db.session.commit()  #atualiza
             flash('Conta criada com sucesso!')
