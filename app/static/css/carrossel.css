@@ -14,7 +14,7 @@ body{
   margin-top: 65px;
 }
 
-.massa{
+.massalasanha{
   margin-left:1048px;
   font-family:IBM Plex Serif;
   margin-top: -485px;
@@ -69,7 +69,7 @@ body{
   margin-bottom: 65px;
 }
 
-#ingredientesmassa{
+#ingredientesmassas{
    margin-left:150px;
   letter-spacing:1.5px;
    font-family:Nanum Myeongjo;
@@ -122,25 +122,18 @@ body{
     margin-top:75px;
 }
 
-#massa{
+#massafit{
    margin-top: -15px;
    margin-left:412px;
    font-family:IBM Plex Serif;
 }
 
-#linha-horizontal6{
-    width: 250px;
-    border: 1px solid #ff6600;
-    margin-left:585px;
-    margin-top: -22px;
-    margin-bottom:75px;
-}
 
 #modospreparofit{
   margin-left:150px;
   font-family:Times New Roman;
   letter-spacing:1.2px;
-  margin-bottom: 35px;
+  margin-bottom: 65px;
 }
 
 #ingredientesfit{
@@ -148,9 +141,8 @@ body{
   letter-spacing:1.5px;
    font-family:Nanum Myeongjo;
    margin-top: -22px;
-   margin-bottom: 45px;
+   margin-bottom: 55px;
 }
-
 
 .BoloChocolate{
   width:853px;
@@ -180,22 +172,13 @@ body{
   margin-top: -350px;
 }
 
-#linha-horizontal7{
-    width: 250px;
-    border: 1px solid #ff6600;
-    margin-left:150px;
-    margin-top: 95px;
-
-}
-
 #massabolo{
    margin-top: -15px;
    margin-left:412px;
    font-family:IBM Plex Serif;
-
 }
 
-#linha-horizontal8 {
+#linha-horizontal6{
     width: 250px;
     border: 1px solid #ff6600;
     margin-left:605px;
@@ -203,19 +186,37 @@ body{
     margin-bottom: 75px;
 }
 
-#modopreparosobre{
+#modospreparosobre{
   margin-left:150px;
   font-family:Times New Roman;
   letter-spacing:1.2px;
-  margin-bottom: 45px;
+  margin-bottom: 65px;
 }
 
-#igredientesbolo{
+#igredientesSobre{
   margin-left:150px;
   letter-spacing:1.5px;
   font-family:Nanum Myeongjo;
   margin-top: -22px;
-  margin-bottom: 45px;
+  margin-bottom: 65px;
+}
+
+
+#linha-horizontal7{
+    width: 250px;
+    border: 1px solid #ff6600;
+    margin-left:1005px;
+    margin-top: -25px;
+    margin-bottom: 75px;
+
+}
+
+#linha-horizontal8 {
+    width: 250px;
+    border: 1px solid #ff6600;
+    margin-left:660px;
+    margin-top: -22px;
+    margin-bottom: 75px;
 }
 
 #linha-horizontal9 {
