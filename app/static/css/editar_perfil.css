@@ -9,12 +9,12 @@ body {
     border-color: #ffa430;
 }
 
-.botao-enviar {
+.botao-enviar{
     background: #bf902a;
     box-shadow: none;
     border: none
 }
-
+/*
 .botao-enviar:hover {
     background: #d57700;
 }
@@ -23,7 +23,19 @@ body {
     background: #784607;
     box-shadow: none
 }
+*/
+.voltar {
+    background: #bf902a;
+    box-shadow: none;
+    border: none;
+}
 
+
+
+
+
+
+/*
 .voltar {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
@@ -33,6 +45,7 @@ body {
 .voltar:hover {
  color: #d57700;
 }
+*/
 
 #h2, .titulo{
   font-family: "Montserrat", italic;
