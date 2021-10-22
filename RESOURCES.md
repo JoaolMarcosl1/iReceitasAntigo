@@ -10,3 +10,5 @@ https://www.pexels.com/pt-br/foto/assado-prato-louca-flatlay-5949885/
 https://www.pexels.com/pt-br/foto/pessoa-segurando-uma-colher-e-uma-tigela-redonda-de-ceramica-vermelha-com-bolos-1065030/
 
 https://www.pexels.com/pt-br/foto/assado-bolo-de-chocolate-torta-de-chocolate-close-5468021/
+
+ícone Contato: https://www.iconpacks.net/free-icon/mail-1015.html
