@@ -12,3 +12,5 @@ https://www.pexels.com/pt-br/foto/pessoa-segurando-uma-colher-e-uma-tigela-redon
 https://www.pexels.com/pt-br/foto/assado-bolo-de-chocolate-torta-de-chocolate-close-5468021/
 
 ícone Contato: https://www.iconpacks.net/free-icon/mail-1015.html
+
+Imagem Email: https://images.pexels.com/photos/9888285/pexels-photo-9888285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
