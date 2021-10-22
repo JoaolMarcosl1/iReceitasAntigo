@@ -151,13 +151,6 @@ body{
    margin-bottom: 45px;
 }
 
-.text-break{
-  margin-right:815px;
-  margin-left:150px;
-  letter-spacing:1.5px;
-  font-family:Nanum Myeongjo;
-  font-size:25px;
-}
 
 .BoloChocolate{
   width:853px;
@@ -223,14 +216,6 @@ body{
   font-family:Nanum Myeongjo;
   margin-top: -22px;
   margin-bottom: 45px;
-}
-
-.text-break{
-  margin-right:815px;
-  margin-left:150px;
-  letter-spacing:1.2px;
-  font-family:Nanum Myeongjo;
-  font-size:25px;
 }
 
 #linha-horizontal9 {
