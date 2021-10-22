@@ -5,20 +5,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
 }
 
-body{
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center center;
-  height: 100px;
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-size: 16px;
-  text-decoration: none;
-}
-
-a:link, a:visited{
+a:link, a:visited, .entrar, .registrar, .sair {
   text-decoration: none;
   color: white;
 }
@@ -31,6 +21,9 @@ header{
   align-items: center;
   padding: 0px 30px;
   height: 125px;
+  background: white;
+
+
 }
 
 .logo{
@@ -81,7 +74,7 @@ header{
   text-decoration: none;
   position: relative;
   right: 10px;
-  color: white;
+  color: #bf902a;
 }
 
 .entrar{
@@ -99,9 +92,27 @@ header{
   list-style: none;
   display: inline-block;
   text-decoration: none;
-  color: white;
+  color: #ffffff;
 }
 
+.sair{
+  font-family: "Montserrat";
+  font-weight: bolder;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background: #d57700;
+  position: center;
+  list-style: none;
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+
+}
 .caixa-search {
     background-color: #333;
     border-radius: 40px;
@@ -124,9 +135,16 @@ header{
     text-decoration: none;
     align-items: center;
     transition: 0.4s;
-    color: orange;
+    color: white;
 
       }
+
+
+.fas {
+    color:#FF7F00;
+}
+
+
 
 .caixa-texto {
     border: none;
@@ -162,3 +180,5 @@ header{
     border: 1px solid #f2f2f2;
 
 }
+
+
