@@ -4,15 +4,14 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="/static/css/home.css">
   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/home.css" >
   <script src="/static/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 
 <body>
-  {% extends 'nav-bar.html' %}
+  {% extends 'nav-rodape.html' %}
   {% block conteudo %}
   <center>
     <div id="linha-horizontal"></div>
@@ -27,8 +26,9 @@
 
   {%endfor%}
 
-  <!--<h5>Seja bem vindo(a) {{ current_user.name }}</h5> !-->
+  <!--<h5>Seja bem vindo(a) {{ current_user.name }}</h5> -->
   <br><br>
+  <div class="tudo">
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -64,9 +64,9 @@
             <a href="https://codepen.io/Danielly_Suousa/pen/zYdxXrV">
               <h5 class="texto"><strong>Como fazer uma Bolo fit delicioso de banana e aveia?</strong></h5>
             </a>
-          </div>
         </div>
-      </div>
+        </div>
+      </div>>
       <div class="carousel-item">
         <div class="text-center">
           <img src="https://images.pexels.com/photos/5468021/pexels-photo-5468021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="rounded" class="d-block w-100" alt="...">
@@ -80,10 +80,22 @@
       </div>
     </div>
   </div>
+  </div>
   <center>
     <div id="linha-horizontal"></div>
   </center>
+<div>
+<center>
+  <H1> CARDS DE RECEITAS CADASTRADAS SPRINT 2</H1>
+  <H1> CARDS DE RECEITAS CADASTRADAS SPRINT 2</H1>
+  <H1> CARDS DE RECEITAS CADASTRADAS SPRINT 2</H1>
+  <H1> CARDS DE RECEITAS CADASTRADAS SPRINT 2</H1>
+  <H1> CARDS DE RECEITAS CADASTRADAS SPRINT 2</H1>
+</center>
+</div>
+
 
 </body>
 {% endblock %}
+
 </html>

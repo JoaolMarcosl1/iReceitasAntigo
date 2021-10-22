@@ -2,6 +2,13 @@
 
 body {
     background: #bf902a;
+    height:100%
+}
+
+.geral {
+    min-height:100%;
+    position:relative;
+    width:800px;
 }
 
 .form-control:focus {
