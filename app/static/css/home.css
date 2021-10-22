@@ -1,165 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
 
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 
+.tudo {
+    height: 100% ;
 }
 
-a:link, a:visited, .entrar, .registrar, .sair {
-  text-decoration: none;
-  color: white;
+..geral {
+    min-height:100%;
+    position:relative;
+    width: 100%;
 }
-header{
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 30px;
-  height: 125px;
-  background: white;
-
-
-}
-
-.logo{
-  cursor: pointer;
-  max-width:237px;
-  max-height:400px;
-
-}
-.itens{
-  list-style: none;
-}
-
-.itens li{
-  font-family: "Montserrat";
-  font-size: 22px;
-  display: inline-block;
-  padding: 0 20px;
-  text-transform: uppercase;
-}
-
-.itens li a{
-  transition: .3s;
-  color: #d57700;
-  font-family: "Montserrat";
-  font-weight: bolder;
-}
-
-.itens li a:hover{
-  color: #d57700;
-  text-decoration: none;
-
-}
-
-.registrar{
-  font-family: "Montserrat";
-  font-weight: bolder;
-  cursor: pointer;
-  color: #fff;
-  font-size: 16px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 10px 30px;
-  border-radius: 20px;
-  background: #d57700;
-  position: center;
-  list-style: none;
-  display: inline-block;
-  text-decoration: none;
-  position: relative;
-  right: 10px;
-  color: #bf902a;
-}
-
-.entrar{
-  font-family: "Montserrat";
-  font-weight: bolder;
-  cursor: pointer;
-  color: #fff;
-  font-size: 16px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 10px 30px;
-  border-radius: 20px;
-  background: #d57700;
-  position: center;
-  list-style: none;
-  display: inline-block;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.sair{
-  font-family: "Montserrat";
-  font-weight: bolder;
-  cursor: pointer;
-  color: #fff;
-  font-size: 16px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 10px 30px;
-  border-radius: 20px;
-  background: #d57700;
-  position: center;
-  list-style: none;
-  display: inline-block;
-  text-decoration: none;
-  color: #ffffff;
-
-}
-.caixa-search {
-    background-color: #333;
-    border-radius: 40px;
-
-}
-.caixa-search:hover > .caixa-texto {
-    width: 240px;
-    padding: 0 5px;
-
-}
-
-.botao-search {
-    float: right;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #333;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    align-items: center;
-    transition: 0.4s;
-    color: white;
-
-      }
-
-
-.fas {
-    color:#FF7F00;
-}
-
-
-
-.caixa-texto {
-    border: none;
-    background-color: #333;
-    outline: none;
-    float: left;
-    padding: 0;
-    color: white;
-    font-size: 16px;
-    transition: 0.4s;
-    line-height: 40px;
-    cursor: pointer;
-    border-radius: 20px;
-}
-
 
 .rounded{
   height:700px;
@@ -176,7 +27,7 @@ header{
 
 
 #linha-horizontal {
-    width: 3000px;
+    width: 100%
     border: 1px solid #f2f2f2;
 
 }

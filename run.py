@@ -78,11 +78,12 @@ def contato():
 
         #message = message+f"\nReperquilson se garante mais que o {current_user.name}"
 
-        msg = Message(subject=f"Help {current_user.name}: {tittle}", body=f"\n{current_user.name}: {message}",
+        msg = Message(subject=f"Suporte para {current_user.name} | {tittle}", body=f"⊶─────≺⋆≻─────⊷\nInformações do usuário:\nEmail: {current_user.email}\nNome: {current_user.name}\n⊶─────≺⋆≻─────⊷\n-{current_user.name}: {message}",
                       sender="joaobastos716@gmail.com", recipients=["receitasprojetoint@gmail.com"])
 
         mail.send(msg)
         flash("Sua mensagem foi enviada com sucesso!")
+
 
         #msg = Message("Olá, Estou precisando da ajuda de vocês.", sender="joaobastos716@gmail.com", recipients=["receitasprojetoint@gmail.com"])
         #msg.body = "Enviando uma duvida, testando"
