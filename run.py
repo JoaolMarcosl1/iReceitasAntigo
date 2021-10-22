@@ -159,6 +159,10 @@ def topicos():
 
 @app.route('/perfil')
 def perfil():
+    if not current_user.is_authenticated:
+        flash("\nSomente quem esta logado pode acessar o seu perfil.")
+    else:
+        flash(".")
     return render_template("perfil_user.html")
 
 
