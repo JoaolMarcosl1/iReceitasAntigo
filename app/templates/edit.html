@@ -14,48 +14,9 @@
   </head>
 
   <body>
-      <header>
+     {% extends 'nav-bar.html' %}
 
-    <a href="{{url_for('home')}}"><img src="https://media.discordapp.net/attachments/719989066808164492/895300449488494622/unknown__1_-removebg-preview_1.png" alt="" class="logo"></a>
-
-    <section class="caixa-search">
-      <input class="caixa-texto" type="text" name="" placeholder="">
-      <a class="botao-search" href="#">
-        <i class="fas fa-search"></i>
-      </a>
-    </section>
-
-    <nav>
-      <ul class="itens">
-        <li><a href="{{url_for('topicos')}}">Tópicos</a></li>
-        {% if current_user.is_authenticated %}
-        <li><a href="{{url_for('contato')}}">Contato</a></li>
-        <li><a href="{{url_for('perfil')}} ">Perfil</a></li>
-        {% endif %}
-
-      </ul>
-    </nav>
-
-    <nav>
-      {% if current_user.is_authenticated %}
-      <ul class="sair">
-        <li><a href=" {{url_for('logout')}}">Logout</a></li>
-      </ul>
-      {% else %}
-      <ul class="registrar">
-        <li> <a href="register">registrar</a> </li>
-      </ul>
-      {% endif %}
-      {% if current_user.is_authenticated %}
-
-      {% else %}
-      <ul class="entrar">
-        <li> <a href="login">entrar</a> </li>
-        {% endif %}
-      </ul>
-    </nav>
-
-  </header>
+    {% block conteudo %}
     <div class="container rounded bg-white mt-5">
       <div class="row">
         <div class="col-md-4 border-right">
@@ -86,5 +47,5 @@
       </div>
     </div>
   </body>
-
+{% endblock %}
 </html>
