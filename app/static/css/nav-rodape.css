@@ -164,12 +164,12 @@ header{
 body{
   margin:0;
   padding:0;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 footer{
   width:100%;
-  min-height: 250px;
+  min-height: 100px;
   background:#ff8533;
   display:flex;
   font-family:Martel;
@@ -177,14 +177,14 @@ footer{
 
 footer .boxs {
   width:325px;
-  min-height:130px;
+  min-height:2px;
   padding:20px;
   margin-left:20px;
 }
 
 .boxs{
   color: #fff;
-  margin-bottom:10px;
+  margin-bottom:6px;
 
 }
 
@@ -229,9 +229,9 @@ footer .boxs {
 }
 
 .sociais .social{
-  width:40px;
-  height:40px;
-  background: #fff;
+  width:28px;
+  height:25px;
+  background: #ff751a;
   text-align:center;
   line-height:40px;
   margin:20px;
@@ -242,7 +242,7 @@ footer .boxs {
 
 .sociais .social a{
   transition: color .3s linear;
-  color:#ffaa80;
+  color:#fff;
   font-size:1.5em;
 }
 

@@ -178,11 +178,15 @@ def perfil():
         flash(".")
     return render_template("perfil_user.html")
 
-
 @app.route('/logout')
 def logout():
     logout_user()
     return redirect(url_for('home'))
+
+
+@app.route('/massas')
+def massas():
+    return render_template("MassasCarrossel.html")
 
 
 if __name__ == '__main__':
