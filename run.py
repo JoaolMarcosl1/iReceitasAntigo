@@ -76,11 +76,14 @@ def contato():
         tittle = request.form.get('tittle')
         message = request.form.get('message')
 
+
         #message = message+f"\nReperquilson se garante mais que o {current_user.name}"
 
-        msg = Message(subject=f"Suporte para {current_user.name} | {tittle}", body=f"⊶─────≺⋆≻─────⊷\nInformações do usuário:\nEmail: {current_user.email}\nNome: {current_user.name}\n⊶─────≺⋆≻─────⊷\n-{current_user.name}: {message}",
+        msg = Message(subject=f"Suporte para {current_user.name} | {tittle}",
                       sender="joaobastos716@gmail.com", recipients=["receitasprojetoint@gmail.com"])
 
+        msg.body = f"{message}"
+        msg.html = render_template('suporte_email.html', message=message)
         mail.send(msg)
         flash("Sua mensagem foi enviada com sucesso!")
 
@@ -89,6 +92,9 @@ def contato():
         #msg.body = "Enviando uma duvida, testando"
         #mail.send(msg)
         return redirect(url_for('home'))
+
+
+    return render_template("contato.html")
 
 
     return render_template("contato.html")
@@ -183,10 +189,6 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
-
-@app.route('/massas')
-def massas():
-    return render_template("MassasCarrossel.html")
 
 
 if __name__ == '__main__':

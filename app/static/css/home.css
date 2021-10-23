@@ -26,9 +26,9 @@
 
 
 
-#linha-horizontal {
+.linha-horizontal {
     width: 100%
-    border: 1px solid #f2f2f2;
+    border: 20px solid #f2f2f2;
 
 }
 
