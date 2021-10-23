@@ -1,3 +1,4 @@
+
 <html lang="PT-BR">
 
 <head>
@@ -13,9 +14,9 @@
 </head>
 
 <body>
- {% extends 'nav-rodape.html' %}
+  {% extends 'nav-rodape.html' %}
 
- {% block conteudo %}
+  {% block conteudo %}
   {% if current_user.is_authenticated %}
   <div class="container rounded bg-white mt-5 geral">
     <div class="row">
@@ -51,7 +52,7 @@
 
   {% endif %}
 
-
 </body>
-{% endblock %}
+  {% endblock %}
+
 </html>
